@@ -68,7 +68,7 @@ API Endpoints:
 
 Usage:
 1. Ensure you have Django installed on your machine.
-2. Clone the repository from [repository link].
+2. Clone the repository from (https://github.com/mohammed377/-edu-learning-platform).
 3. Navigate to the project directory.
 4. Run the Django development server using the command: python manage.py runserver
 5. You can now make requests to the API endpoints using tools like cURL, Postman, or directly from your frontend application.
