@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import (
-    ChangePasswordView, ProfileUpdateView,
     CourseListCreate, CourseRetrieveUpdateDestroy,
     LessonListCreate, LessonRetrieveUpdateDestroy,
     EnrollmentListCreate, EnrollmentRetrieveUpdateDestroy,
@@ -10,12 +9,15 @@ from .views import (
     DiscussionForumListCreate, DiscussionForumRetrieveUpdateDestroy,
     CommentListCreate, CommentRetrieveUpdateDestroy,
     ResourceListCreate, ResourceRetrieveUpdateDestroy,
-    EnrolledCoursesView
+    EnrolledCoursesView,RegisterAPIView, LoginAPIView, LogoutAPIView, UpdateUserAPIView
 )
 
 urlpatterns = [
-    path('users/password/change/', ChangePasswordView.as_view(), name='change-password'),
-    path('users/profile/update/', ProfileUpdateView.as_view(), name='profile-update'),
+    path('register/', RegisterAPIView.as_view(), name='register'),
+    path('login/', LoginAPIView.as_view(), name='login'),
+    path('logout/', LogoutAPIView.as_view(), name='logout'),
+    path('update/', UpdateUserAPIView.as_view(), name='update'),
+
 
     path('courses/', CourseListCreate.as_view(), name='course-list-create'),
     path('courses/<int:pk>/', CourseRetrieveUpdateDestroy.as_view(), name='course-detail'),
