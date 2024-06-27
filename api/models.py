@@ -29,7 +29,7 @@ class Course(models.Model):
     instructor = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     level = models.CharField(max_length=20, choices=LEVELS)
     category = models.CharField(max_length=50)
-
+    
 class Lesson(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()

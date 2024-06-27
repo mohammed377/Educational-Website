@@ -27,7 +27,7 @@ class IsTeacherOrReadOnly(BasePermission):
             return True
         return False  # Deny permission for creating courses
 
-
+##edit
 class IsOwnerOrReadOnly(BasePermission):
     """
     Custom permission to only allow owners of an object to edit it.
